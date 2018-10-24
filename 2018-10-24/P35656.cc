@@ -17,11 +17,12 @@ int avalua() {
     if (c >= '0' and c <= '9') return c - '0';
     if (c == '-') return - avalua();
     if (c == '+') return avalua() + avalua();
-    if (c == '+') return max3(avalua(), avalua(), avalua());
-    assert(false);
+    assert(c == 'm');
+    return max3(avalua(), avalua(), avalua());
 
     // compte: l'ordre d'avaluació dels paràmetres reals no està fixat per C++
-    // aquí funciona independentment de l'ordre. amb un /, per exemple, no funcionaria.
+    // aquí funciona independentment de l'ordre. amb un /, per exemple, no funcionaria
+    // i caldria utilitzar varaibles auxiliars
 }
 
 
