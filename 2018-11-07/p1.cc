@@ -41,7 +41,7 @@ int posicio_del_minim (const vector<double>& d, int e, int d) {
 // ordenació per selecció
 void ordena(vector<double>& v) {
     int n = v.size();
-    // invariant: el subvector v[0..i[ està correctament ordenat
+    // invariant: el subvector v[0..i] està correctament ordenat
     for (int i = 0; i < n; ++i) {
         int p = posicio_del_minim(v, i, n - 1);
         swap(v[i], v[p]);
