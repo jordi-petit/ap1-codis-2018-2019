@@ -31,6 +31,7 @@ void ordena(vector<double>& v) {
     int n = v.size();
     // invariant: el subvector v[0..i[ està correctament ordenat
     for (int i = 0; i < n; ++i) {
+        int p = i;
         for (int j = i + 1; j < n; ++j) {
             if (v[j] < v[p]) {
                 p = j;
@@ -46,7 +47,7 @@ int main() {
     cin >> n;
     vector<double> v(n);
     for (double& x : v) {
-        x = rand() / double(RAND_MAX);
+        x = rand() / double(RAND_MAX);  // valor aleatori entre 0 i 1
     }
     double t1 = now();
     ordena(v);
@@ -54,3 +55,5 @@ int main() {
     cout << t2 - t1 << endl;
     assert(ordenat(v));
 }
+
+

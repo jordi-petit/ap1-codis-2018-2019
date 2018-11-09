@@ -27,9 +27,10 @@ bool ordenat(const vector<double>& v) {
 
 
 // retorna la posició del mínim de v[e..d].
-int posicio_del_minim (const vector<double>& d, int e, int d) {
-    int p = v[e];
-    for (int j = e + 1; j < d; ++j) {
+// prec: 0 ≤ e ≤ d < v.size().
+int posicio_del_minim (const vector<double>& v, int e, int d) {
+    int p = e;
+    for (int j = e + 1; j <= d; ++j) {
         if (v[j] < v[p]) {
             p = j;
         }
