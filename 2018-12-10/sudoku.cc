@@ -119,7 +119,7 @@ void debug(const Sudoku& s) {
 void print(const Sudoku& s) {
     for (int i = 0; i < 9; ++i) {
         for (int j = 0; j < 9; ++j) {
-            cout << unique(s[i][j]) << ' ';
+            cout << unique(s[i][j]) + 1 << ' ';
         }
         cout << endl;
     }
