@@ -11,7 +11,7 @@ int main() {
     int i = 1;
     while (i <= y) {
         p = p * x;
-        i = + 1;
+        i = i + 1;
     }
 
     cout << p << endl;
